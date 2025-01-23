@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Loan Registration"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Tablet Brand Dropdown -->
+            <Spinner
+                android:id="@+id/spinnerTabletBrand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/tablet_brands"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Cable Type -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cable Type:"
+                android:layout_marginBottom="8dp"/>
+            <RadioGroup
+                android:id="@+id/radioGroupCable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton android:id="@+id/radioUsbC" android:text="USB-C" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <RadioButton android:id="@+id/radioMicroUsb" android:text="Micro-USB" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </RadioGroup>
+
+            <!-- Borrower Details -->
+            <EditText
+                android:id="@+id/etBorrowerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Borrower's Name"
+                android:layout_marginBottom="16dp"/>
+
+            <EditText
+                android:id="@+id/etBorrowerContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Borrower's Contact"
+                android:inputType="phone"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Submit Button -->
+            <Button
+                android:id="@+id/btnSubmitLoan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit"/>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

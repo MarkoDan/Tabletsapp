@@ -1,0 +1,22 @@
+<resources>
+    <!-- App Name -->
+    <string name="app_name">Loan Registration System</string>
+
+    <!-- Tablet Brands -->
+    <string-array name="tablet_brands">
+        <item>Samsung</item>
+        <item>Acer</item>
+    </string-array>
+
+    <!-- Labels and Buttons -->
+    <string name="user">User</string>
+    <string name="admin">Admin</string>
+    <string name="submit">Submit</string>
+    <string name="login">Login</string>
+    <string name="borrower_name_hint">Borrower Name</string>
+    <string name="borrower_contact_hint">Borrower Contact</string>
+    <string name="tablet_brand_label">Tablet Brand</string>
+    <string name="cable_type_label">Cable Type</string>
+    <string name="admin_login_title">Admin Login</string>````````````````````````````
+    <string name="loan_overview_title">Loan Overview</string>
+</resources>
