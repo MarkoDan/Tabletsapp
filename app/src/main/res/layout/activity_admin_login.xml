@@ -23,22 +23,21 @@
             android:id="@+id/etAdminUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Username"
-            android:layout_marginBottom="16dp"/>
+            android:hint="Username"/>
 
         <EditText
             android:id="@+id/etAdminPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
-            android:inputType="textPassword"
-            android:layout_marginBottom="16dp"/>
+            android:inputType="textPassword"/>
 
         <Button
             android:id="@+id/btnAdminLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Login"/>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

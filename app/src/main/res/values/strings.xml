@@ -2,8 +2,15 @@
     <!-- App Name -->
     <string name="app_name">Loan Registration System</string>
 
+    <string-array name="cable_types">
+        <item>All</item>
+        <item>Micro-USB</item>
+        <item>USB-C</item>
+    </string-array>
+
     <!-- Tablet Brands -->
     <string-array name="tablet_brands">
+        <item>All</item>
         <item>Samsung</item>
         <item>Acer</item>
     </string-array>

@@ -4,18 +4,41 @@
     android:orientation="vertical"
     android:padding="8dp">
 
+    <!-- Tablet Brand -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+        <TextView
+            android:id="@+id/tvTabletBrand"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tablet Brand: "
+            android:textSize="14sp" />
+        <Button
+            android:id="@+id/btnReturnLoan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mark as Returned" />
+    </LinearLayout>
+
+    <!-- Cable Type -->
     <TextView
-        android:id="@+id/tvTabletBrand"
+        android:id="@+id/tvCableType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tablet Brand" />
+        android:text="Cable Type" />
 
+    <!-- Borrower Name -->
     <TextView
         android:id="@+id/tvBorrowerName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Borrower Name" />
 
+    <!-- Loan Date -->
     <TextView
         android:id="@+id/tvLoanDate"
         android:layout_width="wrap_content"

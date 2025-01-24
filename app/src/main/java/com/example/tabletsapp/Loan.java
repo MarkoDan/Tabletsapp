@@ -55,4 +55,6 @@ public class Loan {
     public void setLoanData(String loanData) {
         this.loanData = loanData;
     }
+
+
 }

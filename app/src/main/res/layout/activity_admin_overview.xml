@@ -1,21 +1,102 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
-    <TextView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loan Overview"
+            android:textSize="24sp"
+            android:layout_gravity="center"
+            android:paddingBottom="16dp" />
+
+        <!-- Filter Section -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="4dp"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="16dp">
+
+                <!-- Tablet Brand Filter -->
+                <Spinner
+                    android:id="@+id/spinnerTabletBrand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/tablet_brands"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Cable Type Filter -->
+                <Spinner
+                    android:id="@+id/spinnerCableType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/cable_types"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Start Date Filter -->
+                <TextView
+                    android:id="@+id/tvStartDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select Start Date"
+                    android:padding="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:hint="YYYY-MM-DD"
+                    android:background="@drawable/textview_border" />
+
+                <!-- End Date Filter -->
+                <TextView
+                    android:id="@+id/tvEndDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select End Date"
+                    android:padding="12dp"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center"
+                    android:hint="YYYY-MM-DD"
+                    android:background="@drawable/textview_border" />
+
+                <!-- Filter Button -->
+                <Button
+                    android:id="@+id/btnFilter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Apply Filter"
+                    android:layout_marginTop="16dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- RecyclerView to show loans -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewLoans"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <!-- Floating Action Button for filters -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabFilter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Loan Overview"
-        android:textSize="24sp"
-        android:layout_gravity="center"
-        android:paddingBottom="16dp" />
+        android:layout_gravity="end|bottom"
+        android:contentDescription="Filter"
+        android:layout_margin="16dp"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewLoans"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-</LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
